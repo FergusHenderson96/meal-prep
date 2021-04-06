@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section{
+  margin: 32px 0 16px 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+button{
+  padding: 8px 16px;
+  background-color: gray;
+  color: #fff;
+  border: none;
+  font-family: "Roboto";
+  font-size: 16px;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: gray;
+}
+
+main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.nutrients ul {
+  display: flex;
+  text-align: center;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+ul{
+  list-style: none;
+}
+
+.meals{
+  display: flex;
+}
+
+img{
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+article{
+  display: flex; 
+  flex-direction: column;
+  padding: 32px;
+  margin: 0 16px;
+  max-width: 290px;
+  box-shadow: 0 4px 8px 2px #2b2b2b;
+}
+
+.instructions{
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+a{
+  text-decoration: none;
+  background-color: gray;
+  color: #fff;
+  width: fit-content;
+  padding: 8px 16px
+}
+a:hover{
+  cursor: pointer;
+  background-color: gray;
+}
+
+@media(max-width: 550px){
+  .meals{
+    flex-direction: column;
+    align-items: center;
+  }
+  .nutrients ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
