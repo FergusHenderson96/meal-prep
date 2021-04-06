@@ -13,7 +13,9 @@ body{
   align-items: center;
   flex-direction: column;
 }
-
+h1{
+  color: rgb(21, 2, 73);
+}
 section{
   margin: 32px 0 16px 0;
 }
@@ -31,7 +33,7 @@ input {
 }
 button{
   padding: 8px 16px;
-  background-color: gray;
+  background-color: rgb(21, 2, 73);
   color: #fff;
   border: none;
   font-family: "Roboto";
@@ -90,7 +92,7 @@ article{
 
 a{
   text-decoration: none;
-  background-color: gray;
+  background-color: rgb(21, 2, 73);
   color: #fff;
   width: fit-content;
   padding: 8px 16px
