@@ -1,21 +1,24 @@
 import React, {useState, useEffect} from 'react';
 
-export default function Meal({meal}){
+//meal passed through from MealList
+function Meal({meal}){
     const [foodData, setFoodData] = useState("");
 
+    //gets the specific meal info from fetch by id thats passed through as props
 useEffect(() => {
     fetch(
         `https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=5071844b4f134084adbb3a8e606f24fe&includeNutrition=false`
     )
     .then((res) => res.json())
     .then((data) => {
-        console.log(data)
+        //sets info to state food data
         setFoodData(data)
       
 })
 .catch(() => {
     console.log("error");
   })
+
 }, [meal.id])
 //this allows the useEffect to call the api if the meal id changes
 
@@ -32,3 +35,5 @@ useEffect(() => {
         </article>;
 
 }
+
+export default Meal;

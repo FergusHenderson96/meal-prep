@@ -1,8 +1,10 @@
 import React from 'react';
 import Meal from "./Meal"
 
-export default function MealList({mealData}){
+//takes meal data from app and passes through as props
+function MealList({mealData}){
 const nutrients = mealData.nutrients;
+//takes nutrients section of the meal data and adds to nutrients variable
 
     return (
         <main>
@@ -19,6 +21,7 @@ const nutrients = mealData.nutrients;
             </section>
 
             <section className="meals">
+                {/* maps into mealdata as meal and sends id to Meal file */}
 {mealData.meals.map((meal) => {
     return <Meal key={meal.id} meal={meal} />;
 })}
@@ -26,3 +29,4 @@ const nutrients = mealData.nutrients;
         </main>
     )
 }
+export default MealList;

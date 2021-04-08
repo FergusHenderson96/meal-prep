@@ -8,19 +8,19 @@ function App() {
   const [mealData, setMealData] = useState(null);
   const [calories, setCalories] = useState(2000);
 
-  function handleChange(e){
+//sets calories to data from form. calories set at 2000 by default
+  const handleChange= (e) => {
     setCalories(e.target.value);
-
   }
-
-  function getMealData() {
+//function to request data for daily meal plan based on calorie amount input
+  const getMealData = () => {
     fetch(
       `https://api.spoonacular.com/mealplanner/generate?apiKey=5071844b4f134084adbb3a8e606f24fe&timeFrame=day&targetCalories=${calories}`
     )
     .then((res) => res.json())
     .then((data) => {
+      //sets meal data in state to fetched data
       setMealData(data);
-      console.log(data)
   })
   .catch(() => {
     console.log("error");
